@@ -1,0 +1,16 @@
+[package]
+name = "bg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.4"
+
+[build-dependencies]
+nasm-rs = "0.3"
+
+[profile.release]
+panic = "abort"
+lto = true
+codegen-units = 1
+strip = true
